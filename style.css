@@ -1,0 +1,38 @@
+body {
+    margin: 50px 10%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.input {
+    width: 50px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.user,
+.message {
+    vertical-align: top;
+}
+
+.user {
+    text-align: right;
+}
+
+.preview {
+    padding: 10px;
+    border: black 1px solid;
+}
+
+#tablechat {
+    font-weight: bold;
+    font-size: 25px;
+    vertical-align: top;
+}
+
+#code {
+
+    font-family: monospace;
+    font-size: large;
+}

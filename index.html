@@ -1,0 +1,95 @@
+<html lang="es">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js"></script>
+</head>
+
+
+<body onload="codeMaker()">
+    <h1>Configurar el chat</h1>
+    <p style=" text-align: center;"><img src="configuracionChat.png" style="width: 500px;"
+            alt="Imagen de configuración"></p>
+
+<p>
+    Para evitar problemas en la ventana del chat los mensajes aparecen con una tipografía
+    estándar, en color negro y con fondo transparente. No obstante, las características del
+    texto pueden modificarse para adecuarse al layout de cada programa.
+</p>
+<p>
+    Con esta herramienta podrás modificar facilemnte el formato del texto del chat.
+    Juega con los diferentes parámetros y obtendrás el código CSS personalizado que
+    posteriormente deberás introducir en la ventana correspondiente de SteamlabsOBS 
+    (ver imagen superior).
+</p>
+<p>
+    Puedes hacerte una idea del aspecto que tendrá el chat en la ventana de previsualización
+    pero debes marcar las casillas de verificación para que las modificaciones se incluyan
+    en el código. 
+</p>
+
+    <hr>
+    <hr>
+
+
+    <h3>Configuración:</h3>
+
+    <table>
+        <tr>
+            <td><input type="checkbox" id="tamanoFuenteCheckbox" onchange="codeMaker()"></td>
+            <td>Tamaño de la fuente:</td>
+            <td><input type="number" class="input" id="tamanoFuente" value=25 onchange="chatSize()"
+                    style="font-size: 15px;"> px (Default value: 25)</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" id="colorMensajeCheckbox" onchange="codeMaker()"></td>
+            <td>Color de los mensajes: <div style="display: inline; padding-left: 10px;"> </div>
+            </td>
+            <td><input type="color" class="input" id="colorMensaje" list="" onchange="messageColor()"></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" id="colorFondoCheckbox" onchange="codeMaker()"></td>
+            <td>Color de fondo:</td>
+            <td><input type="color" class="input" id="colorFondo" list="" onchange="backColor()" value="#ffffff"></td>
+        </tr>
+    </table>
+    <br>
+
+    <hr>
+
+
+    <h3>Código:</h3>
+
+    <div class="preview" id="code">
+        body { margin: 0px auto; overflow: hidden; background-color: rgba(0, 0, 0, 0); }
+    </div>
+    <br>
+
+    <hr>
+
+
+    <h3>Previsualización:</h3>
+
+    <div class="preview" id=chat>
+        <table id="tablechat">
+            <tr>
+                <td class="user" style="color: darkturquoise">Alice_rsa</td>
+                <td></td>
+                <td class="message">Hola don Pepito. Hola don José.</td>
+            </tr>
+            <tr>
+                <td class="user" style="color: blueviolet">Bob1726</td>
+                <td></td>
+                <td class="message">El patio de mi casa es particular, cuando llueve se moja como los demás XD</td>
+            </tr>
+            <tr>
+                <td class="user" style="color: darksalmon">EvanescaVipera</td>
+                <td></td>
+                <td class="message">Había una vez un circo que alegraba siempre el corazón.</td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+
+</html>
